@@ -4,7 +4,7 @@
 
 $(document).ready(function(){
 
-/* SECTION NAV */
+/* SECTION NAV *
 
 // hide ALL sections
 $("section").hide();

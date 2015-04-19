@@ -58,6 +58,8 @@ header nav {
 header nav a {
   color: #333;
 }
+header nav ul li { display: inline; margin-right: 12px; }
+header nav ul li:last-child { margin-right: 0px; }
 
 /* aside */
 aside {
@@ -82,7 +84,7 @@ aside {
   left: 400px;
   right: 0;
   overflow: auto;
-  padding: 1em;
+  padding: 0 1em;
   position: fixed;
   top: 55px;
 }
@@ -137,7 +139,8 @@ section {
 section h1 {
   font-size: 1.8em;
   font-weight: bold;
-  margin-bottom: 10px;
+  padding-top: 0.4em;
+  margin-bottom: 0.6em;
 }
 
 section h2 {
