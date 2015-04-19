@@ -1,6 +1,9 @@
-/* css.css */
-
 /* BASE */
+
+/* Responsive */
+img, embed, object, video {
+  max-width: 100%;
+}
 
 /*
   http://www.dave-woods.co.uk/index.php/using-ems-for-font-sizing/
@@ -19,118 +22,22 @@ section ul li {
 
 /* FRAMES */
 
-/* header bar */
-header {
-  background: #ddd;
-  height: 55px;
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: auto;
-}
-
-/* main h1 */
-header h1 {
-  font-size: 1.2em;
-  font-weight: bold;
-  left: 0px;
-  margin: 30px 10px 10px 10px;
-  padding: 0;
-  position: absolute;
-  text-align: right;
-  top: 0px;
-  width: 380px;
-}
-
-/* header nav */
-header nav {
-  background: #eee;
-  border-left: 1px solid #000;
-  font-size: 1.2em;
-  left: 400px;
-  padding: 30px 10px 10px;
-  position: absolute;
-  right: 0px;
-  text-transform: uppercase;
-  width: auto;
-}
-header nav a {
-  color: #333;
-}
-header nav ul li { display: inline; margin-right: 12px; }
-header nav ul li:last-child { margin-right: 0px; }
-
-/* aside */
-aside {
-  background: #eee;
-  border-top: 1px solid #000;
-  bottom: 0;
-  left: 0px;
-  padding: 10px;
-  position: absolute;
-  text-align: right;
-  top: 55px;
-  width: 380px;
-}
-
-/* content */
-main {
-  background: #fff;
-  border-color: #000;
-  border-style: solid;
-  border-width: 1px 0 0 1px;
-  bottom: 0;
-  font-size: 1.2em;
-  left: 400px;
-  right: 0;
-  overflow: auto;
-  padding: 0 1em;
-  position: fixed;
-  top: 55px;
-}
-
-/* CONTENT NAV */
-
-/* nav bar */
-main nav {
-  background: none;
-  height: 1.6em;
-  margin-bottom: 3.6em;
-  position: relative;
-}
-
-/* all nav */
-main nav ul li { cursor: pointer; display: inline; margin-right: 12px; }
-main nav ul li:last-child { margin-right: 0px; }
-main nav ul li.active { background: rgb(245,245,245); }
-main nav ul li.active li { background: none; }
-main nav ul li.active li.active { background: rgb(245,245,245); }
-main nav ul li li:before { content: "<"; }
-main nav ul li li:after { content: ">"; }
-
-/* top nav */
-main nav > ul {
-  position: absolute;
-  bottom: -1px;
-}
-
-/* sub nav */
-main nav ul ul {
-  background: none;
-  display: none;
-  position: absolute;
-  margin: 0;
-  padding: 0;
-  bottom: -1.8em;
-  left: 1px;
+aside img {
+  box-shadow: 0 0 5px #ccc;
+  cursor: pointer;
 }
 
 /* SECTIONS */
 
+a.anchor {
+  display: block;
+  height: 0;
+  width: 0;
+}
+
 section {
   color: #333;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 main section:last-child {
@@ -145,6 +52,7 @@ section h1 {
 }
 
 section h2 {
+  font-size: 1.2em;
   font-weight: bold;
   margin-top: 1.0em;
 }
