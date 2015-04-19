@@ -1,6 +1,7 @@
 // Resume.js
 
 // START
+
 $(document).ready(function(){
 
 /* SECTION NAV */
@@ -24,13 +25,8 @@ $('#content').prepend(sectionNav);
 
 /* IMAGES */
 
-// add lightbox
-$(function() {
-  $('.gallery a[href$=png], .gallery a[href$=gif], .gallery a[href$=jpg]').lightBox({fixedNavigation:false});
-});
-
 // for each image link
-$('#REMOVEcontent a[href$=gif], #content a[href$=jpg], #content a[href$=png]').each(function() {
+$('#content a[href$=gif], #content a[href$=jpg], #content a[href$=png]').each(function() {
 
   // remove target=new
   $(this).removeAttr('target');
@@ -70,7 +66,7 @@ function addSectionToNav(navList, navLevel) {
 
   // add click event to each list item
   listItem.click(function() {
-  
+
     // hide/deactivate all relatives
     section.parents('#content').find('section').hide();
     $(this).parents('nav').find('li').removeClass('active');
@@ -78,11 +74,11 @@ function addSectionToNav(navList, navLevel) {
     // show/activate all ancestor sections
     section.parents('section').show();
     $(this).parents('li').addClass('active');
-    
+
     // show/activate self
     section.show();
     $(this).addClass('active');
-    
+
     // hide/show subnav
     $(this).parents('nav').find('ul ul').hide(); // hide all nested nav
     $(this).parent('ul').show(); // show my nav level
@@ -116,7 +112,7 @@ function addSectionToNav(navList, navLevel) {
     // add sub to list item
     listItem.append(sectionNavSub);
   }
-  
+
   // append to list item to list
   navList.append(listItem);
 }
