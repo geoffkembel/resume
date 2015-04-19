@@ -75,12 +75,13 @@ aside {
 }
 
 /* content */
-#content {
+main {
   background: #fff;
   border-color: #000;
   border-style: solid;
   border-width: 1px 0 0 1px;
   bottom: 0;
+  font-size: 1.2em;
   left: 400px;
   right: 0;
   overflow: auto;
@@ -92,7 +93,7 @@ aside {
 /* CONTENT NAV */
 
 /* nav bar */
-#content nav {
+main nav {
   background: none;
   height: 1.6em;
   margin-bottom: 3.6em;
@@ -100,22 +101,22 @@ aside {
 }
 
 /* all nav */
-#content nav ul li { cursor: pointer; display: inline; margin-right: 12px; }
-#content nav ul li:last-child { margin-right: 0px; }
-#content nav ul li.active { background: rgb(245,245,245); }
-#content nav ul li.active li { background: none; }
-#content nav ul li.active li.active { background: rgb(245,245,245); }
-#content nav ul li li:before { content: "<"; }
-#content nav ul li li:after { content: ">"; }
+main nav ul li { cursor: pointer; display: inline; margin-right: 12px; }
+main nav ul li:last-child { margin-right: 0px; }
+main nav ul li.active { background: rgb(245,245,245); }
+main nav ul li.active li { background: none; }
+main nav ul li.active li.active { background: rgb(245,245,245); }
+main nav ul li li:before { content: "<"; }
+main nav ul li li:after { content: ">"; }
 
 /* top nav */
-#content nav > ul {
+main nav > ul {
   position: absolute;
   bottom: -1px;
 }
 
 /* sub nav */
-#content nav ul ul {
+main nav ul ul {
   background: none;
   display: none;
   position: absolute;
@@ -132,7 +133,7 @@ section {
   margin-bottom: 20px;
 }
 
-#content section:last-child {
+main section:last-child {
   margin-bottom: 0px;
 }
 
@@ -151,10 +152,6 @@ section h2 {
 section h3 {
   font-style: italic;
   margin-top: 1.5em;
-}
-
-#content {
-  font-size: 1.2em;
 }
 
 /* section properties list */

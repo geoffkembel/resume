@@ -15,18 +15,18 @@ var sectionNavList = $(document.createElement('ul')); // unordered list
 var sectionLevel = 1; // nested section level
 
 // build nav for each top level section; recurses through nested sections as well
-$('#content > section').each(function() {
+$('main > section').each(function() {
   addSectionToNav.call(this, sectionNavList, sectionLevel);
 });
 
 // prepend nav list to content
 sectionNav.append(sectionNavList);
-$('#content').prepend(sectionNav);
+$('main').prepend(sectionNav);
 
 /* IMAGES */
 
 // for each image link
-$('#content a[href$=gif], #content a[href$=jpg], #content a[href$=png]').each(function() {
+$('main a[href$=gif], main a[href$=jpg], main a[href$=png]').each(function() {
 
   // remove target=new
   $(this).removeAttr('target');
@@ -68,7 +68,7 @@ function addSectionToNav(navList, navLevel) {
   listItem.click(function() {
 
     // hide/deactivate all relatives
-    section.parents('#content').find('section').hide();
+    section.parents('main').find('section').hide();
     $(this).parents('nav').find('li').removeClass('active');
 
     // show/activate all ancestor sections
