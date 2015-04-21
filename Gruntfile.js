@@ -15,7 +15,7 @@ module.exports = function(grunt) {
     less: {
       build: {
         files: {
-          "build/compiled.css": ["css/*.less"]
+          "build/compiled.css": ["src/css/*.less"]
         }
       },
     },
@@ -24,8 +24,8 @@ module.exports = function(grunt) {
     concat: {
       build: {
         files: {
-          'build/resume.js': ['js/*.js'],
-          'build/resume.css': ['css/*.css', 'build/compiled.css']
+          'build/resume.js': ['src/js/*.js'],
+          'build/resume.css': ['src/css/*.css', 'build/compiled.css']
         }
       }
     },
@@ -34,7 +34,7 @@ module.exports = function(grunt) {
     uglify: {
       build: {
         src: 'build/resume.js',
-        dest: 'build/resume.min.js'
+        dest: 'dist/resume.min.js'
       }
     },
 
@@ -42,7 +42,20 @@ module.exports = function(grunt) {
     cssmin: {
       css: {
         src: 'build/resume.css',
-        dest: 'build/resume.min.css'
+        dest: 'dist/resume.min.css'
+      }
+    },
+
+    htmlmin: {
+      build: {
+        options: {
+          removeComments: true,
+          collapseWhitespace: true
+        },
+        files: {
+          'dist/index.html': 'src/index.html',
+          'dist/coffeetable.html': 'src/coffeetable.html'
+        }
       }
     }
 
@@ -54,8 +67,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks('grunt-contrib-htmlmin');
 
   // Default task(s)
-  grunt.registerTask('default', ['clean', 'less', 'concat', 'uglify', 'cssmin']);
+  grunt.registerTask('default', ['clean', 'less', 'concat', 'uglify', 'cssmin', 'htmlmin']);
 
 };
