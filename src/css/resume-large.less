@@ -73,42 +73,6 @@
     padding: 0 1em 1em 1em;
     position: fixed;
     top: 55px;
-
-    /* CONTENT NAV */
-
-    /* nav bar */
-    nav {
-      background: none;
-      height: 1.6em;
-      margin-bottom: 3.6em;
-      position: relative;
-
-      /* top nav */
-      > ul {
-        position: absolute;
-        bottom: -1px;
-      }
-
-      /* all nav */
-      ul li { cursor: pointer; display: inline; margin-right: 12px; }
-      ul li:last-child { margin-right: 0px; }
-      ul li.active { background: rgb(245,245,245); }
-      ul li.active li { background: none; }
-      ul li.active li.active { background: rgb(245,245,245); }
-      ul li li:before { content: "<"; }
-      ul li li:after { content: ">"; }
-
-      /* sub nav */
-      ul ul {
-        background: none;
-        display: none;
-        position: absolute;
-        margin: 0;
-        padding: 0;
-        bottom: -1.8em;
-        left: 1px;
-      }
-    }
   }
 
 }
