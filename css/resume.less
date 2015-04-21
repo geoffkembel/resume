@@ -1,0 +1,66 @@
+/* BASE */
+
+/* Responsive */
+img, embed, object, video {
+  max-width: 100%;
+}
+
+/*
+  http://www.dave-woods.co.uk/index.php/using-ems-for-font-sizing/
+  http://fordinteractive.com/tools/emchart/
+*/
+body, select, input, textarea {
+  font: 0.625em/1.4 arial, verdana, helvetica, sans-serif;
+}
+
+/* FRAMES */
+
+aside img {
+  box-shadow: 0 0 5px #aaa;
+  cursor: pointer;
+}
+
+/* SECTIONS */
+
+section {
+  color: #333;
+  margin-bottom: 10px;
+
+  a.anchor {
+    display: block;
+    height: 0;
+    width: 0;
+  }
+
+  h1 {
+    font-size: 1.8em;
+    font-weight: bold;
+    padding-top: 0.4em;
+    margin-bottom: 0.6em;
+  }
+
+  h2 {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 1.1em;
+  }
+
+  ol li:first-child { font-style: italic; }
+
+  h3 {
+    font-style: italic;
+    margin-top: 1.1em;
+  }
+
+  ul {
+  	margin-left: 2em;
+  }
+  ul li {
+  	list-style: disc outside;
+  }
+
+  a[target=new] {
+    background: url('../img/uparrow.gif') right 3px no-repeat;
+    padding-right: 10px
+  }
+}
