@@ -1,66 +1,67 @@
-/*
-  -large.css is for the 2x2 layout with the image loading in the left aside
- */
+/* For small screens */
+@media screen and (max-width: 799px) {
 
-/* FRAMES */
+  /* FRAMES */
 
-/* header bar */
-header {
-  background: #ddd;
-  font-size: 1.8em;
-  height: 90px;
-  left: 0;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 9999;
-}
+  /* header bar */
+  header {
+    background: #ddd;
+    font-size: 1.8em;
+    height: 90px;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+  }
 
-/* main h1 */
-header h1 {
-  font-weight: bold;
-  padding: 10px;
-  text-transform: uppercase;
-}
+  /* main h1 */
+  header h1 {
+    font-weight: bold;
+    padding: 10px;
+    text-transform: uppercase;
+  }
 
-/* header nav */
-header nav {
-  background: #eee;
-  border-bottom: 1px solid #aaa;
-  border-top: 1px solid #aaa;
-  padding: 10px;
-}
-header nav a {
-  color: #333;
-}
-header nav ul li { display: inline; margin-right: 12px; }
-header nav ul li:first-child, header nav ul li:last-child {
-  display: none;
-}
+  /* header nav */
+  header nav {
+    background: #eee;
+    border-bottom: 1px solid #aaa;
+    border-top: 1px solid #aaa;
+    padding: 10px;
+  }
+  header nav a {
+    color: #333;
+  }
+  header nav ul li { display: inline; margin-right: 12px; }
+  header nav ul li:first-child, header nav ul li:last-child {
+    display: none;
+  }
 
-/* aside */
-aside {
-  top: 90px;
-  left: 0;
-  position: fixed;
-  width: 100%;
-  z-index: 9999;
-}
-aside img {
-  max-height: 100%;
-  margin: 0 auto;
-}
+  /* aside */
+  aside {
+    top: 90px;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+  }
+  aside img {
+    max-height: 100%;
+    margin: 0 auto;
+  }
 
-/* content */
-main {
-  background: #fff;
-  font-size: 1.6em;
-  margin-top: 90px;
-  overflow: auto;
-  padding: 0 1em 1em 1em;
-}
+  /* content */
+  main {
+    background: #fff;
+    font-size: 1.6em;
+    margin-top: 90px;
+    overflow: auto;
+    padding: 0 1em 1em 1em;
+  }
 
-a.anchor {
-  position: relative;
-  top: -90px;
+  a.anchor {
+    position: relative;
+    top: -90px;
+  }
+
 }
