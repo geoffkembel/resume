@@ -4,6 +4,11 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
 
+    // linting
+    jshint: {
+      all: ['src/js/*.js']
+    },
+
     // clean the build folder
     clean: {
       build: [
@@ -62,6 +67,7 @@ module.exports = function(grunt) {
   });
 
   // Load plugins
+  grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-less');
@@ -70,6 +76,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-htmlmin');
 
   // Default task(s)
-  grunt.registerTask('default', ['clean', 'less', 'concat', 'uglify', 'cssmin', 'htmlmin']);
+  grunt.registerTask('default', ['jshint', 'clean', 'less', 'concat', 'uglify', 'cssmin', 'htmlmin']);
 
 };
